@@ -12,14 +12,6 @@ const Social = ({ className }: Props) => {
 
   return (
     <Wrapper className={className}>
-      <a href="https://discord.gg/aWm5DfyC" target="_blank" rel="noreferrer">
-        <Icon
-          name="Discord"
-          bordered
-          width={isTabletOrMobile ? '21px' : '21px'}
-          height={isTabletOrMobile ? '16px' : '16px'}
-        />
-      </a>
       <a href="https://twitter.com/L1ON_BTC" target="_blank" rel="noreferrer">
         <Icon
           name="twitter"
