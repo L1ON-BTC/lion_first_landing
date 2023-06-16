@@ -6,8 +6,13 @@ import { default as StyledSocial } from '../Social';
 import { Wrapper } from './App.styles';
 
 const Logo = styled(Icon)`
+  transition: transform 0.3s ease-in-out;
   margin-top: 64px;
   margin-bottom: 22px;
+
+  &:hover {
+    transform: rotate(-9deg) scale(1.02);
+  }
 `;
 
 const Button = styled(StyledButton)`
