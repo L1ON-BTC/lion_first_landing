@@ -28,19 +28,15 @@ const GlobalStyle = createGlobalStyle`
 
 		color: var(--primay);
 
-		align-items: center;
 		display: flex;
 		justify-content: center;
 		
 		font-family: 'Montserrat', sans-serif;
 		letter-spacing: 0.05em;
+		line-height: 1.45em;
 
 		margin: 0;
 		padding: 0;
-	}
-
-	p {
-		line-height: 1.45em;
 	}
 
 	h3 {

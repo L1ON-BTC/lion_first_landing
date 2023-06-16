@@ -1,14 +1,18 @@
-import { Discord, Twitter } from '../Icons';
+import Icon from '../Icon';
 import { Wrapper } from './Social.styles';
 
-const Social = () => {
+type Props = {
+  className?: string;
+};
+
+const Social = ({ className }: Props) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <a href="https://discord.gg/aWm5DfyC" target="_blank" rel="noreferrer">
-        <Discord />
+        <Icon name="Discord" bordered />
       </a>
       <a href="https://twitter.com/L1ON_BTC" target="_blank" rel="noreferrer">
-        <Twitter />
+        <Icon name="twitter" bordered />
       </a>
     </Wrapper>
   );

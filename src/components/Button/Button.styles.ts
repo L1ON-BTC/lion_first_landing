@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 export const StyledButton = styled.button`
   border: none;
   background-color: var(--accent);
+  display: inline-block;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.75em;
   width: 100%;

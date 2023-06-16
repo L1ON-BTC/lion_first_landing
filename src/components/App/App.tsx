@@ -1,18 +1,39 @@
-import Button from '../Button';
-import { Logo, Wordmark } from '../Icons';
-import Social from '../Social';
+import { styled } from 'styled-components';
+
+import { default as StyledButton } from '../Button';
+import Icon from '../Icon';
+import { default as StyledSocial } from '../Social';
 import { Wrapper } from './App.styles';
+
+const Logo = styled(Icon)`
+  margin-top: 64px;
+  margin-bottom: 22px;
+`;
+
+const Button = styled(StyledButton)`
+  margin: 40px 0;
+`;
+
+const Social = styled(StyledSocial)`
+  margin-top: 24px;
+`;
+
+const Title = styled.div`
+  margin-bottom: -10px;
+`;
+
+const Wordmark = styled(Icon)`
+  margin-bottom: 30px;
+`;
 
 const App = () => (
   <Wrapper>
-    <div>
-      <Logo />
-    </div>
-    <div>
-      <Wordmark />
-    </div>
+    <Logo name="logo" />
+    <Wordmark name="wordmark" />
+    <Title>
+      <h3>L1 on Bitcoin</h3>
+    </Title>
 
-    <h3>L1 on Bitcoin</h3>
     <p>
       A new platform to launch BRC-20U+2019s, BRC-721U+2019s and many other utilities
       Bitcoin blockchain
