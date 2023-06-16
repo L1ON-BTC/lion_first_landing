@@ -10,13 +10,13 @@ export const Wrapper = styled.div`
   margin-top: 64px;
 
   @media (max-width: 480px) {
-    margin-top: 23px;
+    margin: 23px;
   }
 `;
 
 export const WordmarkWrapper = styled.div`
-  justify-content: center;
   display: flex;
+  justify-content: center;
   margin-bottom: 30px;
   text-align: center;
 
@@ -32,7 +32,7 @@ export const LogoWrapper = styled.div`
 
   @media (max-width: 480px) {
     justify-content: flex-end;
-    margin-bottom: 180px;
+    margin-bottom: 210px;
   }
 `;
 
