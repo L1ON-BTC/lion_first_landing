@@ -1,16 +1,12 @@
-import { StyledButton, Wrapper } from './Button.styles';
+import { StyledButton } from './Button.styles';
 
 type Props = {
   children: string | JSX.Element | JSX.Element[];
-  className?: string;
+  width?: string;
 };
 
-const Button = ({ children, className }: Props) => {
-  return (
-    <Wrapper className={className}>
-      <StyledButton>{children}</StyledButton>
-    </Wrapper>
-  );
-};
+const Button = ({ children, width }: Props) => (
+  <StyledButton width={width}>{children}</StyledButton>
+);
 
 export default Button;

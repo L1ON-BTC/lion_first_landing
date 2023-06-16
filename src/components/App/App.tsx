@@ -1,12 +1,13 @@
 import { useMediaQuery } from 'react-responsive';
 
+import Button from '../Button';
 import Icon from '../Icon';
 import {
+  ButtonWrapper,
   Content,
   Follow,
   Logo,
   LogoWrapper,
-  StyledButton,
   StyledSocial,
   Title,
   WordmarkWrapper,
@@ -41,7 +42,9 @@ const App = () => {
         Bitcoin blockchain
       </Content>
 
-      <StyledButton>Coming Soon</StyledButton>
+      <ButtonWrapper>
+        <Button width="150px">Coming Soon</Button>
+      </ButtonWrapper>
 
       <Follow>Follow us for updates</Follow>
 

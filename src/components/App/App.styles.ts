@@ -54,9 +54,13 @@ export const Content = styled.div`
   text-align: center;
 `;
 
-export const StyledButton = styled(Button)`
-  margin: 40px 0;
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
 `;
+
+export const StyledButton = styled(Button)``;
 
 export const StyledSocial = styled(Social)`
   margin-top: 24px;
