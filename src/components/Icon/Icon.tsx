@@ -5,12 +5,14 @@ import Twitter from './Icons/Twitter';
 import Wordmark from './Icons/Wordmark';
 
 type Props = {
-  name: string;
   className?: string;
   bordered?: boolean;
+  name: string;
+  width?: string;
+  height?: string;
 };
 
-const Icon = ({ className, name, bordered }: Props) => {
+const Icon = ({ className, bordered, width, name, height }: Props) => {
   const sanitizedName = name.toLowerCase();
 
   const renderComponent = () => {
@@ -29,7 +31,7 @@ const Icon = ({ className, name, bordered }: Props) => {
   };
 
   return (
-    <Wrapper className={className} bordered={bordered}>
+    <Wrapper bordered={bordered} className={className} width={width} height={height}>
       {renderComponent()}
     </Wrapper>
   );

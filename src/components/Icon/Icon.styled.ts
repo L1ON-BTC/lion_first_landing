@@ -4,7 +4,14 @@ export const Svg = styled.svg`
   fill: var(--accent);
 `;
 
-export const Wrapper = styled.div<{ bordered?: boolean }>`
+export const Wrapper = styled.div<{
+  bordered?: boolean;
+  width?: string;
+  height?: string;
+}>`
+  width: ${({ width }) => width && width};
+  height: ${({ height }) => height && height};
+
   ${({ bordered }) =>
     bordered &&
     css`
@@ -15,5 +22,10 @@ export const Wrapper = styled.div<{ bordered?: boolean }>`
       height: 60px;
       justify-content: center;
       width: 60px;
+      padding: 20px;
     `}
+
+  svg {
+    width: 100%;
+  }
 `;

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-import background from './bg.webp';
+import backgroundDesktop from './assets/bg-desktop.webp';
+import backgroundMobile from './assets/bg-mobile.webp';
 
 const GlobalStyle = createGlobalStyle`
 	:root {
@@ -20,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		background-image: url(${background}); 
+		background-image: url(${backgroundDesktop});
 		background-position: bottom center;
 		background-size: contain; 
 		background-color: var(--bg-primay);
@@ -37,6 +38,11 @@ const GlobalStyle = createGlobalStyle`
 
 		margin: 0;
 		padding: 0;
+
+		@media (max-width: 480px) {
+			background-image: url(${backgroundMobile});
+			background-position: top left;
+		}
 	}
 
 	h3 {

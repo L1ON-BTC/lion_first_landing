@@ -1,52 +1,53 @@
-import { styled } from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
-import { default as StyledButton } from '../Button';
 import Icon from '../Icon';
-import { default as StyledSocial } from '../Social';
-import { Wrapper } from './App.styles';
+import {
+  Content,
+  Follow,
+  Logo,
+  LogoWrapper,
+  StyledButton,
+  StyledSocial,
+  Title,
+  WordmarkWrapper,
+  Wrapper,
+} from './App.styles';
 
-const Logo = styled(Icon)`
-  transition: transform 0.3s ease-in-out;
-  margin-top: 64px;
-  margin-bottom: 22px;
+const App = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 480px)' });
 
-  &:hover {
-    transform: rotate(-9deg) scale(1.02);
-  }
-`;
+  return (
+    <Wrapper>
+      <LogoWrapper>
+        <Logo
+          name="logo"
+          width={isTabletOrMobile ? '70px' : '93px'}
+          height={isTabletOrMobile ? '70px' : '93px'}
+        />
+      </LogoWrapper>
 
-const Button = styled(StyledButton)`
-  margin: 40px 0;
-`;
+      <WordmarkWrapper>
+        <Icon
+          name="wordmark"
+          width={isTabletOrMobile ? '96px' : '96px'}
+          height={isTabletOrMobile ? '27px' : '27px'}
+        />
+      </WordmarkWrapper>
 
-const Social = styled(StyledSocial)`
-  margin-top: 24px;
-`;
+      <Title>L1 on Bitcoin</Title>
 
-const Title = styled.div`
-  margin-bottom: -10px;
-`;
+      <Content>
+        A new platform to launch BRC-20&#8217;s, BRC-721&#8217;s and many other utilities
+        Bitcoin blockchain
+      </Content>
 
-const Wordmark = styled(Icon)`
-  margin-bottom: 30px;
-`;
+      <StyledButton>Coming Soon</StyledButton>
 
-const App = () => (
-  <Wrapper>
-    <Logo name="logo" />
-    <Wordmark name="wordmark" />
-    <Title>
-      <h3>L1 on Bitcoin</h3>
-    </Title>
+      <Follow>Follow us for updates</Follow>
 
-    <p>
-      A new platform to launch BRC-20U+2019s, BRC-721U+2019s and many other utilities
-      Bitcoin blockchain
-    </p>
-    <Button>Coming Soon</Button>
-    <p>Follow us for updates</p>
-    <Social />
-  </Wrapper>
-);
+      <StyledSocial />
+    </Wrapper>
+  );
+};
 
 export default App;
