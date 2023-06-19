@@ -38,8 +38,8 @@ const App = () => {
       <Title>L1 on Bitcoin</Title>
 
       <Content>
-        A new platform to launch BRC-20&#8217;s, BRC-721&#8217;s and many other utilities
-        Bitcoin blockchain
+        A new platform to launch BRC-20 tokens, BRC-721 tokens, and various other
+        utilities on the Bitcoin blockchain.
       </Content>
 
       <ButtonWrapper>
