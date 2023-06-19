@@ -1,7 +1,4 @@
 module.exports = {
-  importOrder: ['^react(.*)', '<THIRD_PARTY_MODULES>', '@/(.*)', '^[./]'],
-  importOrderSeparation: true,
-  importOrderSortSpecifiers: true,
   semi: true,
   trailingComma: 'all',
   singleQuote: true,
