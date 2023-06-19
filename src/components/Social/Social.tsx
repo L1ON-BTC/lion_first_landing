@@ -1,6 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 
-import Icon from '../Icon';
+import Icon from '@/components/Icon';
+
 import { Wrapper } from './Social.styles';
 
 type Props = {

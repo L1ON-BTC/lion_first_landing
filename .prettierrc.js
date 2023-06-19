@@ -1,5 +1,5 @@
 module.exports = {
-  importOrder: ["^components/(.*)$", "^[./]" ],
+  importOrder: ["<THIRD_PARTY_MODULES>", "@/lib/(.*)$", "^@/components/(.*)$", "^[./]" ],
   importOrderSeparation: true, 
   importOrderSortSpecifiers: true,
   semi: true,
