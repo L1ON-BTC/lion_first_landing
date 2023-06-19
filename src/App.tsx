@@ -1,12 +1,11 @@
 import { Suspense } from 'react';
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-// Create a client
-const queryClient = new QueryClient();
+import { queryClient } from '@/lib/react-query';
 
 const ErrorFallback = () => {
   return (
