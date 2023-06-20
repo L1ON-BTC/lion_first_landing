@@ -1,8 +1,7 @@
 import { styled } from 'styled-components';
 
-import Button from '../Button';
-import Icon from '../Icon';
-import Social from '../Social';
+import Button from '@/components/Button';
+import Icon from '@/components/Icon';
 
 export const Wrapper = styled.div`
   max-width: 360px;
@@ -62,14 +61,20 @@ export const ButtonWrapper = styled.div`
 
 export const StyledButton = styled(Button)``;
 
-export const StyledSocial = styled(Social)`
-  margin-top: 24px;
-`;
-
 export const Title = styled.h3`
   text-align: center;
 `;
 
 export const Follow = styled.p`
   text-align: center;
+`;
+
+export const SocialWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+  a {
+    margin: 0 8px;
+  }
 `;

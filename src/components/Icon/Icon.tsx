@@ -6,7 +6,7 @@ import Wordmark from './Icons/Wordmark';
 
 type Props = {
   className?: string;
-  bordered?: boolean;
+  bordered?: boolean | undefined;
   name: string;
   width?: string;
   height?: string;
@@ -31,7 +31,7 @@ const Icon = ({ className, bordered, width, name, height }: Props) => {
   };
 
   return (
-    <Wrapper bordered={bordered} className={className} width={width} height={height}>
+    <Wrapper $bordered={bordered} className={className} width={width} height={height}>
       {renderComponent()}
     </Wrapper>
   );

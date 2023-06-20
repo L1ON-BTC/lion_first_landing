@@ -5,15 +5,15 @@ export const Svg = styled.svg`
 `;
 
 export const Wrapper = styled.div<{
-  bordered?: boolean;
+  $bordered?: boolean | undefined;
   width?: string;
   height?: string;
 }>`
   width: ${({ width }) => width && width};
   height: ${({ height }) => height && height};
 
-  ${({ bordered }) =>
-    bordered &&
+  ${({ $bordered }) =>
+    $bordered &&
     css`
       align-items: center;
       border: 1px solid var(--accent);
