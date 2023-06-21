@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import Button from '@/components/Button';
 import { Head } from '@/components/Head';
 import Icon from '@/components/Icon';
+import { useUserStore } from '@/stores/user';
 
 import {
   ButtonWrapper,
@@ -18,6 +19,13 @@ import {
 
 export const ComingSoon = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 480px)' });
+
+  const { addresses, addAddresses } = useUserStore(({ addresses, addAddresses }) => ({
+    addresses,
+    addAddresses,
+  }));
+
+  console.log(addresses);
 
   return (
     <>
@@ -48,7 +56,9 @@ export const ComingSoon = () => {
         </Content>
 
         <ButtonWrapper>
-          <Button width="150px">Coming Soon</Button>
+          <Button onClick={() => addAddresses()} width="150px">
+            Coming Soon
+          </Button>
         </ButtonWrapper>
 
         <Follow>Follow us for updates</Follow>

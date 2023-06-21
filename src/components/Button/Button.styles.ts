@@ -9,5 +9,4 @@ export const StyledButton = styled.button<{ width?: string }>`
   font-size: 0.75em;
   width: ${({ width }) => (width ? width : '100%')};
   padding: 14px;
-  pointer-events: none;
 `;
