@@ -78,3 +78,17 @@ export const SocialWrapper = styled.div`
     margin: 0 8px;
   }
 `;
+
+export const SubmitWrapper = styled.div`
+  text-align: center;
+
+  button {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--primary);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+  }
+`;

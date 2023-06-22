@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.14",
+    "@typeform/embed-react": "^2.23.0",
     "eslint-import-resolver-custom-alias": "^1.3.2",
     "lodash": "^4.17.21",
     "nanoid": "^4.0.2",

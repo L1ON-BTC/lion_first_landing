@@ -1,11 +1,5 @@
 import uniqueId from 'lodash/fp/uniqueId';
-import {
-  getAddress,
-  signTransaction,
-  GetAddressOptions,
-  GetAddressResponse,
-  Address,
-} from 'sats-connect';
+import { getAddress, GetAddressOptions, GetAddressResponse, Address } from 'sats-connect';
 import { create } from 'zustand';
 import { devtools, persist, createJSONStorage } from 'zustand/middleware';
 

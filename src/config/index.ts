@@ -1,6 +1,4 @@
-import { GetAddressPayload } from 'sats-connect';
-
-export const GET_ADDRESS_PAYLOAD: GetAddressPayload = {
+export const GET_ADDRESS_PAYLOAD = {
   purposes: ['ordinals', 'payment'],
   message: 'Address for receiving Ordinals and payments',
   network: {
