@@ -47,7 +47,19 @@ const GlobalStyle = createGlobalStyle`
 
 	h3 {
 		font-size: 1.25em;
-	}	
+		font-weight: 700;
+	}
+
+	button {
+		border: none;
+		background-color: var(--accent);
+		color: var(--bg-primay);
+		display: inline-block;
+		font-family: 'Roboto Mono', monospace;
+		font-size: 0.75em;
+		padding: 14px;
+		cursor: pointer;
+	}
 `;
 
 export default GlobalStyle;

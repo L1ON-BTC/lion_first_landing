@@ -1,7 +1,6 @@
 import { PopupButton } from '@typeform/embed-react';
 import { useMediaQuery } from 'react-responsive';
 
-import Button from '@/components/Button';
 import { Head } from '@/components/Head';
 import Icon from '@/components/Icon';
 
@@ -9,13 +8,13 @@ import {
   ButtonWrapper,
   Content,
   Follow,
-  Logo,
   LogoWrapper,
   SocialWrapper,
   Title,
   WordmarkWrapper,
   Wrapper,
-  SubmitWrapper,
+  StyledMarquee,
+  MarqueeItem,
 } from './ComingSoon.styled';
 
 export const ComingSoon = () => {
@@ -27,7 +26,7 @@ export const ComingSoon = () => {
 
       <Wrapper>
         <LogoWrapper>
-          <Logo
+          <Icon
             name="logo"
             width={isTabletOrMobile ? '70px' : '93px'}
             height={isTabletOrMobile ? '70px' : '93px'}
@@ -42,15 +41,16 @@ export const ComingSoon = () => {
           />
         </WordmarkWrapper>
 
-        <Title>L1 on Bitcoin</Title>
+        <Title>Bitcoin Utility Platform</Title>
 
         <Content>
-          A new platform to launch BRC-20 tokens, BRC-721 tokens, and various other
-          utilities on the Bitcoin blockchain.
+          Offering customized solutions for <br /> your project launch
         </Content>
 
         <ButtonWrapper>
-          <Button width="150px">Coming Soon</Button>
+          <PopupButton id="VXiSRflu" size={150}>
+            Apply Project for Launchpad
+          </PopupButton>
         </ButtonWrapper>
 
         <Follow>Follow us for updates</Follow>
@@ -60,17 +60,37 @@ export const ComingSoon = () => {
             <Icon
               name="twitter"
               bordered={true}
-              width={isTabletOrMobile ? '96px' : '96px'}
+              width={isTabletOrMobile ? '83px' : '83px'}
               height={isTabletOrMobile ? '27px' : '27px'}
             />
           </a>
         </SocialWrapper>
 
-        <SubmitWrapper>
-          <PopupButton id="VXiSRflu" size={60}>
-            submit project
-          </PopupButton>
-        </SubmitWrapper>
+        <StyledMarquee>
+          <div>BRC-721</div>
+
+          <div>
+            <Icon name="logo" width={'23px'} height={'23px'} />
+          </div>
+
+          <div>Launchpad</div>
+
+          <div>
+            <Icon name="logo" width={'23px'} height={'23px'} />
+          </div>
+
+          <div>Ordinals</div>
+
+          <div>
+            <Icon name="logo" width={'23px'} height={'23px'} />
+          </div>
+
+          <div>BRC-20</div>
+
+          <div>
+            <Icon name="logo" width={'23px'} height={'23px'} />
+          </div>
+        </StyledMarquee>
       </Wrapper>
     </>
   );

@@ -8,10 +8,8 @@ type Props = {
   width?: string;
 };
 
-const Button = ({ children, onClick, width }: Props) => (
+export const Button = ({ children, onClick, width }: Props) => (
   <StyledButton onClick={onClick} width={width}>
     {children}
   </StyledButton>
 );
-
-export default Button;

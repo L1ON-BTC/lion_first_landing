@@ -1,7 +1,5 @@
+import Marquee from 'react-fast-marquee';
 import { styled } from 'styled-components';
-
-import Button from '@/components/Button';
-import Icon from '@/components/Icon';
 
 export const Wrapper = styled.div`
   max-width: 360px;
@@ -35,21 +33,13 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const Logo = styled(Icon)`
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: rotate(-9deg) scale(1.02);
-  }
-
-  @media (max-width: 480px) {
-    &:hover {
-      transform: none;
-    }
-  }
+export const Title = styled.h3`
+  text-align: center;
 `;
 
 export const Content = styled.div`
+  font-size: 1.125em;
+  font-weight: 600;
   text-align: center;
 `;
 
@@ -57,12 +47,6 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: 40px 0px;
-`;
-
-export const StyledButton = styled(Button)``;
-
-export const Title = styled.h3`
-  text-align: center;
 `;
 
 export const Follow = styled.p`
@@ -79,16 +63,39 @@ export const SocialWrapper = styled.div`
   }
 `;
 
-export const SubmitWrapper = styled.div`
-  text-align: center;
+export const StyledMarquee = styled(Marquee)`
+  color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.75em;
+  text-transform: uppercase;
+  position: absolute;
+  left: -10px;
+  width: 101vw;
+  transform: rotate(-3deg);
+  bottom: 500px;
+  overflow: hidden;
+  padding: 20px 0;
 
-  button {
-    margin-top: 20px;
-    background: none;
-    border: none;
-    padding: 0;
-    color: var(--primary);
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+  .marquee,
+  .initial-child-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+  }
+
+  .child {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+
+    > {
+      flex: 1;
+    }
   }
 `;
