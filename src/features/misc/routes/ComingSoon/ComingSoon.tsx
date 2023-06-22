@@ -48,7 +48,7 @@ export const ComingSoon = () => {
         </Content>
 
         <ButtonWrapper>
-          <PopupButton id="VXiSRflu" size={150}>
+          <PopupButton id="VXiSRflu" size={60}>
             Apply Project for Launchpad
           </PopupButton>
         </ButtonWrapper>
