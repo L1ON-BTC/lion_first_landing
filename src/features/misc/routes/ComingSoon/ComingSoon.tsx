@@ -14,7 +14,6 @@ import {
   WordmarkWrapper,
   Wrapper,
   StyledMarquee,
-  MarqueeItem,
 } from './ComingSoon.styled';
 
 export const ComingSoon = () => {
@@ -65,32 +64,33 @@ export const ComingSoon = () => {
             />
           </a>
         </SocialWrapper>
+        {!isTabletOrMobile ? (
+          <StyledMarquee>
+            <div>BRC-721</div>
 
-        <StyledMarquee>
-          <div>BRC-721</div>
+            <div>
+              <Icon name="logo" width={'23px'} height={'23px'} />
+            </div>
 
-          <div>
-            <Icon name="logo" width={'23px'} height={'23px'} />
-          </div>
+            <div>Launchpad</div>
 
-          <div>Launchpad</div>
+            <div>
+              <Icon name="logo" width={'23px'} height={'23px'} />
+            </div>
 
-          <div>
-            <Icon name="logo" width={'23px'} height={'23px'} />
-          </div>
+            <div>Ordinals</div>
 
-          <div>Ordinals</div>
+            <div>
+              <Icon name="logo" width={'23px'} height={'23px'} />
+            </div>
 
-          <div>
-            <Icon name="logo" width={'23px'} height={'23px'} />
-          </div>
+            <div>BRC-20</div>
 
-          <div>BRC-20</div>
-
-          <div>
-            <Icon name="logo" width={'23px'} height={'23px'} />
-          </div>
-        </StyledMarquee>
+            <div>
+              <Icon name="logo" width={'23px'} height={'23px'} />
+            </div>
+          </StyledMarquee>
+        ) : null}
       </Wrapper>
     </>
   );

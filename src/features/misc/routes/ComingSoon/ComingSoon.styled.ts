@@ -11,17 +11,6 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const WordmarkWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-  text-align: center;
-
-  @media (max-width: 480px) {
-    margin-bottom: 0px;
-  }
-`;
-
 export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -30,6 +19,17 @@ export const LogoWrapper = styled.div`
   @media (max-width: 480px) {
     justify-content: flex-end;
     margin-bottom: 210px;
+  }
+`;
+
+export const WordmarkWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 52px;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    margin-bottom: 0px;
   }
 `;
 
@@ -46,7 +46,8 @@ export const Content = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 40px 0px;
+  margin-top: 36px;
+  margin-bottom: 79px;
 `;
 
 export const Follow = styled.p`
@@ -56,7 +57,7 @@ export const Follow = styled.p`
 export const SocialWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 29px;
 
   a {
     margin: 0 8px;
