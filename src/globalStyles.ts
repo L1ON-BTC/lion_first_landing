@@ -18,12 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
 	html, body {
 		height: 100%;
-		overflow: hidden;
-
-		@media (max-width: 480px) {
-			overflow: auto;
-			overflow-x: hidden;
-		}
+		overflow-x: hidden;
 	}
 
 	body {
