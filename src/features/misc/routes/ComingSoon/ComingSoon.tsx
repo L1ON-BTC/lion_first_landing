@@ -14,6 +14,8 @@ import {
   WordmarkWrapper,
   Wrapper,
   StyledMarquee,
+  MarqueeWrapper,
+  Page,
 } from './ComingSoon.styled';
 
 export const ComingSoon = () => {
@@ -23,49 +25,52 @@ export const ComingSoon = () => {
     <>
       <Head description="L1ON - Coming Soon" />
 
-      <Wrapper>
-        <LogoWrapper>
-          <Icon
-            name="logo"
-            width={isTabletOrMobile ? '70px' : '93px'}
-            height={isTabletOrMobile ? '70px' : '93px'}
-          />
-        </LogoWrapper>
-
-        <WordmarkWrapper>
-          <Icon
-            name="wordmark"
-            width={isTabletOrMobile ? '96px' : '96px'}
-            height={isTabletOrMobile ? '27px' : '27px'}
-          />
-        </WordmarkWrapper>
-
-        <Title>Bitcoin Utility Platform</Title>
-
-        <Content>
-          Offering customized solutions for <br /> your project launch
-        </Content>
-
-        <ButtonWrapper>
-          <PopupButton id="VXiSRflu" size={60}>
-            Apply Project for Launchpad
-          </PopupButton>
-        </ButtonWrapper>
-
-        <Follow>Follow us for updates</Follow>
-
-        <SocialWrapper>
-          <a href="https://twitter.com/L1ON_BTC" target="_blank" rel="noreferrer">
+      <Page>
+        <Wrapper>
+          <LogoWrapper>
             <Icon
-              name="twitter"
-              bordered={true}
-              width={isTabletOrMobile ? '83px' : '83px'}
+              name="logo"
+              width={isTabletOrMobile ? '70px' : '93px'}
+              height={isTabletOrMobile ? '70px' : '93px'}
+            />
+          </LogoWrapper>
+
+          <WordmarkWrapper>
+            <Icon
+              name="wordmark"
+              width={isTabletOrMobile ? '96px' : '96px'}
               height={isTabletOrMobile ? '27px' : '27px'}
             />
-          </a>
-        </SocialWrapper>
-        {!isTabletOrMobile ? (
-          <StyledMarquee>
+          </WordmarkWrapper>
+
+          <Title>Bitcoin Utility Platform</Title>
+
+          <Content>
+            Offering customized solutions for <br /> your project launch
+          </Content>
+
+          <ButtonWrapper>
+            <PopupButton id="VXiSRflu" size={60}>
+              Apply Project for Launchpad
+            </PopupButton>
+          </ButtonWrapper>
+
+          <Follow>Follow us for updates</Follow>
+
+          <SocialWrapper>
+            <a href="https://twitter.com/L1ON_BTC" target="_blank" rel="noreferrer">
+              <Icon
+                name="twitter"
+                bordered={true}
+                width={isTabletOrMobile ? '83px' : '83px'}
+                height={isTabletOrMobile ? '27px' : '27px'}
+              />
+            </a>
+          </SocialWrapper>
+        </Wrapper>
+
+        <MarqueeWrapper>
+          <StyledMarquee autoFill>
             <div>BRC-721</div>
 
             <div>
@@ -90,8 +95,8 @@ export const ComingSoon = () => {
               <Icon name="logo" width={'23px'} height={'23px'} />
             </div>
           </StyledMarquee>
-        ) : null}
-      </Wrapper>
+        </MarqueeWrapper>
+      </Page>
     </>
   );
 };

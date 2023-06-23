@@ -1,13 +1,23 @@
 import Marquee from 'react-fast-marquee';
 import { styled } from 'styled-components';
 
+export const Page = styled.div`
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+`;
+
 export const Wrapper = styled.div`
-  max-width: 360px;
   margin: 0 20px;
-  margin-top: 64px;
+  padding-top: 64px;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1 0 auto;
+  margin-bottom: 50px;
 
   @media (max-width: 480px) {
-    margin: 23px;
+    padding-top: 23px;
   }
 `;
 
@@ -64,6 +74,19 @@ export const SocialWrapper = styled.div`
   }
 `;
 
+export const MarqueeWrapper = styled.div`
+  width: 101vw;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @media (min-width: 480px) and (min-height: 900px) {
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-3deg);
+  }
+`;
+
 export const StyledMarquee = styled(Marquee)`
   color: var(--accent);
   background-color: rgba(255, 255, 255, 0.2);
@@ -73,13 +96,9 @@ export const StyledMarquee = styled(Marquee)`
   font-weight: 600;
   font-size: 2.75em;
   text-transform: uppercase;
-  position: absolute;
-  left: -10px;
-  width: 101vw;
-  transform: rotate(-3deg);
-  bottom: 500px;
-  overflow: hidden;
   padding: 20px 0;
+  gap: 24px;
+  width: 200vw;
 
   .marquee,
   .initial-child-container {
@@ -87,6 +106,7 @@ export const StyledMarquee = styled(Marquee)`
     justify-content: center;
     display: flex;
     flex: 1;
+    gap: 24px;
   }
 
   .child {
@@ -94,6 +114,7 @@ export const StyledMarquee = styled(Marquee)`
     justify-content: center;
     display: flex;
     flex: 1;
+    white-space: nowrap;
 
     > {
       flex: 1;
