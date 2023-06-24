@@ -1,8 +1,10 @@
-import { Wrapper } from './Icon.styled';
-import Discord from './Icons/Discord';
-import Logo from './Icons/Logo';
-import Twitter from './Icons/Twitter';
-import Wordmark from './Icons/Wordmark';
+import clsx from 'clsx';
+
+import styles from './icon.module.scss';
+import { Discord } from './Icons/Discord';
+import { Logo } from './Icons/Logo';
+import { Twitter } from './Icons/Twitter';
+import { Wordmark } from './Icons/Wordmark';
 
 type Props = {
   className?: string;
@@ -12,7 +14,7 @@ type Props = {
   height?: string;
 };
 
-const Icon = ({ className, bordered, width, name, height }: Props) => {
+export const Icon = ({ bordered, width, name, height }: Props) => {
   const sanitizedName = name.toLowerCase();
 
   const renderComponent = () => {
@@ -31,10 +33,11 @@ const Icon = ({ className, bordered, width, name, height }: Props) => {
   };
 
   return (
-    <Wrapper $bordered={bordered} className={className} width={width} height={height}>
+    <div
+      className={clsx(styles.wrapper, bordered && styles.bordered)}
+      style={{ height, width }}
+    >
       {renderComponent()}
-    </Wrapper>
+    </div>
   );
 };
-
-export default Icon;

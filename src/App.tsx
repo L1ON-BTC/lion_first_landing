@@ -1,10 +1,12 @@
 import { AppProvider } from '@/providers/app';
 import { AppRoutes } from '@/routes';
 
-const App = () => (
-  <AppProvider>
-    <AppRoutes />
-  </AppProvider>
-);
+const App = () => {
+  return (
+    <AppProvider>
+      <AppRoutes />
+    </AppProvider>
+  );
+};
 
 export default App;

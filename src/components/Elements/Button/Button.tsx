@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledButton } from './Button.styles';
+import './button.module.scss';
 
 type Props = {
   children: string | JSX.Element | JSX.Element[];
@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const Button = ({ children, onClick, width }: Props) => (
-  <StyledButton onClick={onClick} width={width}>
+  <button className="button" onClick={onClick}>
     {children}
-  </StyledButton>
+  </button>
 );

@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: var(--accent);
+    width: 100%;
+  }
+}
+
+.bordered {
+  align-items: center;
+  border: 1px solid var(--accent);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: rotate(45deg);
+
+  svg {
+    transform: rotate(-45deg);
+  }
+}
