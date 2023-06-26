@@ -23,7 +23,7 @@ export const Projects = () => {
 
   return (
     <div>
-      {projects.map((project) => (
+      {projects.map((project: any) => (
         <div key={project.id}>
           <Link to={`/projects/${project.id}`}>{project.id}</Link>
         </div>

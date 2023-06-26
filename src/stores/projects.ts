@@ -25,7 +25,7 @@ const initialState = {
  This is where the magic happens, we can fully hide
  the WebSocket implementation here and then use our store anywhere in our app!
  */
-const mutations = (setState, getState) => {
+const mutations = (setState: any, getState: any) => {
   const socket = ioClient(IOCLIENT);
 
   // this is enough to connect all our server events
@@ -46,11 +46,10 @@ const mutations = (setState, getState) => {
 
   return {
     actions: {
-      getProject({ projectId }) {
-        console.log(projectId);
+      getProject({ projectId }: any) {
         socket.emit('getProject', projectId);
       },
-      getProjects({ page, limit }) {
+      getProjects({ page, limit }: any) {
         socket.emit('getProjects', { page, limit });
       },
     },

@@ -8,11 +8,8 @@ import { useProjectsStore } from '@/stores/projects';
 
 export const Project = () => {
   const { projectId } = useParams();
-  console.log(projectId);
   const actions = useProjectsStore((store) => store.actions);
   const project = useProjectsStore((store) => store.project);
-
-  console.log(project);
 
   useEffect(() => {
     const getProject = () => {
